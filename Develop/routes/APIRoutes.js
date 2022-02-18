@@ -11,12 +11,12 @@ api.get('/api/notes', (req,res) => {
 // POST /api/notes should receive a new note to save on the request body, 
 // add it to the db.json file, and then return the new note to the client.
 api.post('/api/notes', (req,res) => {
-    let notes = JSON.parse(fs.readFileSync('../db/db.json'))
+    let notes = JSON.parse(fs.readFileSync('./db/db.json'))
     let newNote = req.body;
     newNote.id = uuid.v4();
 
     notes.push(newNote);
-    fs.writeFileSync('../db/db.json', JSON.stringify(notes))
+    fs.writeFileSync('./db/db.json', JSON.stringify(notes))
     res.json(notes);
 })
 
