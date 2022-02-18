@@ -23,6 +23,7 @@ This can be used to write, save and delete notes. This application will use an E
 ## Usage
 - run the application by enter ``npm start`` or ``node server.js``
 
+- [Heroku deploy link](https://tranquil-thicket-18490.herokuapp.com/)
 
 The following image is the sceenshot of application's appearance:
 ![screen shot of the website](./Assets/Image1.png)
