@@ -21,7 +21,7 @@ api.post('/api/notes', (req,res) => {
 })
 
 // DELETE /api/notes/:id should receive a query parameter that contains the id of a note to delete
-api.delete('/api/notes', (req,res) => {
+api.delete('/api/notes/:id', (req,res) => {
     let notes = JSON.parse(fs.readFileSync('./db/db.json'));
     let deletion = notes.filter((note) => note.id !== req.params.id);
     fs.writeFileSync('./db/db.json', JSON.stringify(deletion))
